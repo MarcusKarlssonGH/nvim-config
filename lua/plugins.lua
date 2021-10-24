@@ -10,13 +10,15 @@ return require('packer').startup(function(use)
 -- LSP
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
-  --use 'glepnir/lspsaga.nvim'
 -- Completion
+	use 'hrsh7th/nvim-cmp' -- Completion engine
+  use 'hrsh7th/cmp-buffer' -- From open buffers
+  use 'hrsh7th/cmp-path' -- File/path completion
+  use 'hrsh7th/cmp-nvim-lua'
 	use 'hrsh7th/cmp-nvim-lsp'
-	use 'hrsh7th/cmp-buffer'
-	use 'hrsh7th/nvim-cmp'
   use 'onsails/lspkind-nvim'
   use 'glepnir/lspsaga.nvim'
+  use { 'L3MON4D3/LuaSnip' }
 -- TreeSitter
   use {'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'}

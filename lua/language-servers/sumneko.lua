@@ -4,8 +4,10 @@ local main_path = root_path.."/main.lua"
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 require'lspconfig'.sumneko_lua.setup {
+	capabilities = capabilities,
   cmd = {binary_path, "-E", main_path};
   settings = {
     Lua = {
