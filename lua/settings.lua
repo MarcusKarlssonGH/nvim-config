@@ -21,7 +21,7 @@ vim.o.splitbelow = true -- force all horizontal splits to go below current windo
 vim.o.splitright = true -- force all vertical splits to go to the right of current window
 vim.o.swapfile = false -- creates a swapfile
 vim.o.termguicolors = true -- set term gui colors (most terminals support this)
---vim.o.timeoutlen = 100 -- time to wait for a mapped sequence to complete (in milliseconds)
+vim.o.timeoutlen = 500 -- time to wait for a mapped sequence to complete (in milliseconds)
 vim.o.title = true -- set the title of window to the value of the titlestring
 vim.o.titlestring = "%<%F%=%l/%L - nvim"
 -- vim.o.-- opt.titlestring = "" -- what the title of the window will be set to

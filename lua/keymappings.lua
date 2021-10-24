@@ -38,3 +38,17 @@ vim.api.nvim_set_keymap('x', 'J', ":move '>+1<CR>gv=gv", { noremap = true, silen
 -- Why do we have to map to _ when we use /?
 vim.api.nvim_set_keymap('v', '<C-_>', 'gc', { silent = true })
 vim.api.nvim_set_keymap('n', '<C-_>', 'gcc', { silent = true })
+
+-- Pro tips from Primeagen
+-- Make yank behave
+vim.api.nvim_set_keymap('n', 'Y', 'yg$', { noremap = true, silent = true })
+-- Better jumping
+vim.api.nvim_set_keymap('n', 'n', 'nzzzv', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'N', 'Nzzzv', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'J', "mzJ'z", { noremap = true, silent = true })
+-- Undo checkpoints
+vim.api.nvim_set_keymap('i', ',', ',<c-g>u', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '.', '.<c-g>u', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '!', '!<c-g>u', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '?', '?<c-g>u', { noremap = true, silent = true })
+

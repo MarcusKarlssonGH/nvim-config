@@ -49,5 +49,6 @@ require("nvim-tree").setup{
 }
 
 require("Comment").setup()
+require("which-key-config")
 --require("nvim_comment").setup({line_mapping = "<C-/>", operator_mapping = "<C-/>"})
 
